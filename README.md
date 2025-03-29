@@ -7,7 +7,8 @@ Welcome to the **Node.js Mini Projects** repository! This collection features a 
 - Database Management with MongoDB  
 
 ### 🌟 Projects Included:  
-- **User Management API**: Perform CRUD operations using Express and MongoDB.  
+- **User Management API**: Perform CRUD operations using Express and MongoDB.
+- **URL Shortner**: Short URL and track the total count on that URL. 
 - **Basic Authentication System**: Implement JWT-based authentication.  
 - **Task Manager**: Manage tasks with a complete API.  
 - **File Upload API**: Upload and manage files using Multer.  
