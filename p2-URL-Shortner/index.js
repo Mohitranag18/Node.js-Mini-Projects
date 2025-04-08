@@ -4,6 +4,7 @@ const connectMongoDB = require("./connection")
 
 const urlRoute = require("./routes/url")
 const staticRoute = require("./routes/staticRoutes")
+const  userRoute = require("./routes/user")
 
 const app = express()
 PORT = 8000
@@ -20,6 +21,8 @@ connectMongoDB("mongodb://localhost:27017/url-short")
 
 app.use("/url", urlRoute)
 app.use("/", staticRoute) 
+app.use("/user", userRoute) 
+
 
 app.listen(PORT, ()=>{
     console.log(`Server Started at PORT: ${PORT}`)
