@@ -1,11 +1,20 @@
 import express from "express";
+import dotenv from"dotenv"
+import { connectDB } from "./config/db.js";
+import router from "./routes/product.route.js";
+
+dotenv.config()
+const PORT = process.env.PORT || 5000
 
 const app = express()
 
-app.get("/products", (req, res)=>{
-    res.send("server is ready")
+app.use(express.json()) //allow us to accept json data in the req.body
+
+app.use("/api/products", router)
+
+app.listen(PORT, ()=>{
+    connectDB()
+    console.log(`Server started at http://localhost:${PORT}`)
 })
 
-app.listen(5000, ()=>{
-    console.log("Server started at http://localhost:5000")
-})
+
