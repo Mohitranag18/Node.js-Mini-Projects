@@ -1,15 +1,19 @@
 import { useState } from 'react'
-import { Button, HStack } from "@chakra-ui/react"
+import { Route, Routes } from "react-router-dom"
+import Navbar from './components/Navbar'
+import HomePage from './pages/HomePage'
+import CreatePage from './pages/CreatePage'
 
 function App() {
 
   return (
-    <>
-    <HStack>
-      <Button>Click me</Button>
-      <Button>Click me</Button>
-    </HStack>
-    </>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/create" element={<CreatePage />}/>
+      </Routes>
+    </div>
   )
 }
 
